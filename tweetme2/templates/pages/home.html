@@ -3,24 +3,27 @@
 
 from home
 <h1> hello world </h1>
-{% block content %}
 
+    {% block content %}
 
 <div id='tweetme-2'></div>
 
+<!--- title tweet  -->
 
 
-<div class='row text-center d-none'>
+<div class='row text-center '>
     <div class='col'>
         <h1>Welcome to Tweetme 2</h1>
     </div>
 </div>
 
-<div class='row mb-3 d-none'>
+<!--- submit tweet  -->
+
+<div class='row mb-3 '>
     <div class='col-md-4 mx-auto col-10'>
         <form class='form' id='tweet-create-form' method='POST' action='/create-tweet'>
             {% csrf_token %}
-            <div class='d-none alert alert-danger' id='tweet-create-form-error'></div>
+            <div class=' alert alert-danger' id='tweet-create-form-error'></div>
             <input type='hidden' value='/' name='next' />
             <textarea required='required' class='form-control' name='content' placeholder='Your tweet...'></textarea>
             <button type='submit' class='btn btn-primary'>Tweet</button>
@@ -29,10 +32,13 @@ from home
 </div>
 
 
+<!--- incase there tweet  -->
 
-<div class='row d-none' id='tweets'>
+<div class='row mb-3 ' id='tweets'>
+    <div class='col-md-4 mx-auto col-10'>
     Loading...
-</div>
+</div></div>
+
 
 <script>
 

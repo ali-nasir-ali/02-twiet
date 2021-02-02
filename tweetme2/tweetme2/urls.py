@@ -13,7 +13,7 @@ urlpatterns = [
     path('', home_view),
     path('create-tweet', tweet_create_view),
     path('tweets', tweet_list_view),
-    path('tweets/<int:tweet_id>', home_view),
+    path('tweets/<int:tweet_id>', tweet_detail_view),
 
 ]  # at 1 hour mark
 #     <a class="nav-item nav-link" href="{% url '' %}">To do list</a>
